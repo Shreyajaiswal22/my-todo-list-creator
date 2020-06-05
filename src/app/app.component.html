@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: center;">
+  <img src="../assets/logo.png" alt="LCO logo" width="100" height="100" class="logo"/>
+  <h1 class="app-title">LCO todo list</h1>
+
+</div>
+<div class="container">
+  Add a todo...
+  <br>
+<input type="text" name="" 
+class="input-text"
+ placeholder="type a todo"
+ [(ngModle)]="todoValue"
+ (keyup.enter) ="addItem()"
+ />
+<button class="add-btn" (click) = "addItem()">Add todo</button>
+<div class="list">
+  <ul>
+    <li *ngFor="let items of list">
+      <input type="checkbox" name="isdone"
+      [(ngModle)]="item.isdone"
+      />
+      {{item.value}}
+      Task 1
+      <button class="btn" (click) ="deleteItem(item.id)">Delete</button>
+    </li>
+  </ul>
+</div>
+</div>
+
+
